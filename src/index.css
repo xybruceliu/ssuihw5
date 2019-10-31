@@ -1,13 +1,121 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'PT Sans';
+  font-size: 18px;
+  background-image: url("./assets/imgs/background.jpg");
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.tiles {
+  padding: 16vh 16vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.tile {
+  margin: 15px;
+  cursor: pointer;
+  width: 18vw;
+  height: 18vw;
+}
+.tile img {
+  width: 100%;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  
+}
+.tile img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#title{
+  margin: 0;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: whitesmoke;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px #d70101;
+}
+
+.btn {
+  font-family: 'PT Sans';
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  border-color: #2196F3;
+  color: dodgerblue;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+#instruction{
+  color:whitesmoke;
+  font-size: 12px;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 59%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal img{
+  width: 81%;
+  height: auto;
+}
+
+.modal button{
+  font-family: 'PT Sans';
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #2196F3;
+  color: dodgerblue;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal button:hover{
+  background: #2196F3;
+  color: white;
 }
